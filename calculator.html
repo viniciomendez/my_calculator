@@ -3,16 +3,21 @@
 	<head>
 		<title>Calculator</title>
 		<meta charset="utf-8">
-		<script type="text/javascript">
-		function cube() {
-			var num = document.getElementById("n1");  
-			num.value = Math.pow(num.value, 3);
-		}
-		</script>
 	</head>
 	<body>
 		<h1>Calculadora de ......Vinicio Mendez......</h1>  
-		Number:  <input type="text" id="n1">  
-		<p><button onclick="cube()"> x^3 </button></p>
+		Number:  <input type="text" id="n1">
+		<p><button onclick="potencia(3)"> x^3 </button></p>
+		<p><button onclick="potencia(4)"> x^4 </button></p>
+		<p><button onclick="limpiar()"> limpiar </button></p>
 	</body>
 </html>
+<script type="text/javascript">
+var num = document.getElementById("n1");  
+function potencia(indice) {
+	num.value = Math.pow(num.value, indice);
+}
+function limpiar() {
+	num.value = ''
+}
+</script>
